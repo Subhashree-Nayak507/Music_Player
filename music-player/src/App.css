@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+  background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.music-player {
+  max-width: 400px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-section input[type="file"] {
+  display: block;
+  margin-bottom: 10px;
+  background-color: #fdbb2d;
+  color: white;
+}
+
+.upload-section label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fdbb2d;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-section label:hover {
+  background-color: #eaa80a; 
+}
+
+.now-playing {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.song-info h2 {
+  color: white;
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+}
+
+.progress-bar {
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 5px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.progress {
+  background-color: #fdbb2d;
+  height: 100%;
+  width: 50%; 
+  border-radius: 5px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controls button:hover {
+  color: #fdbb2d;
+  transform: scale(1.1);
+}
+
+.playlist {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.playlist h3 {
+  color: white;
+  margin-top: 0;
+}
+
+.playlist-item {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.playlist-item:last-child {
+  border-bottom: none;
+}
+
+.playlist-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.playlist-item.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.now-playing-icon {
+  font-size: 1.2em;
+}
+
+.playlist::-webkit-scrollbar {
+  width: 8px;
+}
+
+.playlist::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.playlist::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
